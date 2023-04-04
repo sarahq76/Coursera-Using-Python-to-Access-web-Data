@@ -1,0 +1,17 @@
+import urllib
+from bs4 import BeautifulSoup
+
+url=input('Enter')
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html)
+
+tags=soup('span')
+count=0
+summ=0
+for tag in tags:
+    x=int(tag.text)
+    count=count+1
+    summ=summ+x
+    
+print(count)
+print(summ)
