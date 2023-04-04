@@ -1,1 +1,14 @@
+Fname=input('Enter file Name: ')
+handle=open(Fname)
 
+count=0
+summ=0
+
+for line in handle:
+    x=re.findall('[0-9]+',line)
+    
+    for number in x:
+            count=count+1
+            summ=summ+int(number)
+
+print("the number of digits are: ",count," the sum of the digits is: ",summ)
